@@ -1,0 +1,122 @@
+/* colors
+bg #000
+grey #a6a6a6
+orange  #ff9501
+white #fdfdfd */
+body{
+    background: #127adbd6;
+}
+
+.calc {
+    width: 300px;
+    height: 500px;
+    margin: 50px auto;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    box-shadow: 4px 4px 4px #4f4f4f ;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none; /*чтобы не выделялись кнопки при нажатии*/
+}
+
+.btn_zero{
+    width: 150px;
+    border-radius: 30px;
+    grid-column: span 2;
+}
+
+.btn:hover{
+    filter: brightness(120%);
+}
+
+.btn:active{
+    filter: brightness(90%);
+}
+
+.btn.bg_grey{
+    background: #a6a6a6;
+}
+
+.btn.bg_orange{
+    background: #ff9501;
+}
+
+.cals_screen{
+    height: 100px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.cals_screen p {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Окно скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+}
