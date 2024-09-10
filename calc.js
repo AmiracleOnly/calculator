@@ -55,15 +55,29 @@ document.querySelector('.buttons').onclick = (event) =>{
         return
     }
 
-    if ( key === "+/-"){
-        if (b === ''){
-            a = -a
-            out.textContent = a;
-        }else{
-            b = -b
-            out.textContent = b;
-        }
-        return;
+    // if ( key === "+/-"){
+    //     if (b === ''){
+    //         a = -a
+    //         out.textContent = a;
+    //     }else{
+    //         b = -b
+    //         out.textContent = b;
+    //     }
+    //     return;
+    // }
+
+    // if (key === "+/-"){
+    //      b = parseFloat(out.textContent);
+    //     b = -b;
+    //     out.textContent = b
+    //     return
+    // }
+    
+    if (key === '+/-'){
+        if (b === '') return;
+        a = parseFloat(a) * -1
+        out.textContent = a;
+        return
     }
 
     if ( key === "%"){
