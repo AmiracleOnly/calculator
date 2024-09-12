@@ -4,7 +4,7 @@ let sign = ''; // знак операции
 let finish = false; 
 
 const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
-const action = ['-', '+', 'x', '/', '%', '+/-'];
+const action = ['-', '+', 'x', '/'];
 
 //экран
 const out = document.querySelector('.cals_screen p');
@@ -55,16 +55,16 @@ document.querySelector('.buttons').onclick = (event) =>{
         return
     }
 
-    // if ( key === "+/-"){
-    //     if (b === ''){
-    //         a = -a
-    //         out.textContent = a;
-    //     }else{
-    //         b = -b
-    //         out.textContent = b;
-    //     }
-    //     return;
-    // }
+    if ( key === '+/-'){
+        if (b === '' && sign === ''){
+            a = a ? (-a).toString() : '-'
+            out.textContent = a;
+        }else if (a !== '' && b !== ''){
+            b = (-b).toString();
+            out.textContent = b;
+        }
+        return;
+    }
 
     // if (key === "+/-"){
     //      b = parseFloat(out.textContent);

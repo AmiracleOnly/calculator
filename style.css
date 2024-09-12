@@ -49,6 +49,12 @@ body{
     grid-column: span 2;
 }
 
+/* .btn_grey{
+    width: 150px;
+    border-radius: 30px;
+    grid-column: span 2;
+} */
+
 .btn:hover{
     filter: brightness(120%);
 }
